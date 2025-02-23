@@ -1,0 +1,14 @@
+<div class="product-categories">
+  <button (click)="assignCategory('Notebooks')">Notebooks</button>
+  <button (click)="assignCategory('Keyboards')">Keyboards</button>
+  <button (click)="assignCategory('Mouses')">Mouses</button>
+  <button (click)="assignCategory('Vacuum Cleaners')">Vacuum Cleaners</button>
+</div>
+
+<app-product-list
+  *ngIf="selectedCategory"
+  [products]="products[selectedCategory]"
+  [globalProducts]="products"
+  [currentCategory]="selectedCategory"
+>
+</app-product-list>
